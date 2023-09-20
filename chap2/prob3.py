@@ -1,0 +1,21 @@
+print('\t\t\tTrust Fund Buddy')
+print('')
+print("Totals your monthly spending so that your trust fund doesn't run out")
+print("(and you're forced to get a real job).")
+print('')
+print("Please enter the requested, monthly costs. Since you're rich, ignore pennies")
+print("and use only dollar amounts.")
+print('')
+print('')
+lamCost = int(input("Lamborghini Tune-Ups: "))
+apartCost = int(input("ManHattan Apartment: "))
+jetCost = int(input("Private Jet Rental: "))
+giftsCost = int(input("Gifts: "))
+dinningCost = int(input("Dinning Out: "))
+staffCost = int(input("Staff (butlers, chef, driver, assistant): "))
+coachCost = int(input("Personal Guru and Coach: "))
+computerCost = int(input("Computer Game: "))
+
+total = lamCost + apartCost + jetCost + giftsCost + dinningCost + staffCost + coachCost + computerCost
+
+print("Grand Total: ",  total)
