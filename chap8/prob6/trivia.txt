@@ -1,0 +1,36 @@
+Guess which country it is
+countries
+It is one of the best soccer countries and famous for the Eiffel Tower
+USA
+Japan
+France
+China
+3
+The Eiffel Tower is located in Paris, France, and France is one of the countries that is good at soccer.
+Guess What food I'm describing
+Food
+This is one of the representative foods in Korea and it is a dish where vegetables and red pepper paste are mixed with rice.
+Bibimbap
+Bulgogi
+Chicken
+Kimchi
+1
+Bibimbap is a dish where vegetables and red pepper paste are mixed with rice.
+A calculation problem
+Mathematics
+What is 4 plus 9 * 2
+21
+22
+23
+24
+2
+9 times 2 is 18, 18 plus 4 is 22.
+What is the name of the programming language that I'm describing
+Programming language
+It was developed by Dennis Ritchie, an American computer scientist, in the early 1970s while working at Bell Labs. And this is a procedural language.
+Java
+Python
+C
+C#
+3
+The language that Dennis Ritchie created in 1972 is the C language.
