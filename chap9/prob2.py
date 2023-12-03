@@ -1,52 +1,61 @@
-class Critter() :
+class Critter :
     mood_level = 0
     
     def __init__(self, name) :
         self.name = name
 
-    def setMood(level) : 
+    def setMood(self, level) : 
         Critter.mood_level += level
     
-    def getMood() :
+    def getMood(self) :
         return Critter.mood_level
 
     def talk(self) :
-        if Critter.getMood() <= 2 :
+        mood = self.getMood()
+        if mood <= 2 :
             print("I'm " + self.name + " and I feel mad now")
-            print('')
-            Critter.setMood(-1)
 
-        elif Critter.getMood() <= 4 :
+        elif mood <= 4 :
             print("I'm " + self.name + " and I'm doing okay")
-            print('')
-            Critter.setMood(-1)
         
-        elif Critter.getMood() <= 6 :
+        elif mood <= 6 :
             print("I'm " + self.name + " and I feel happy now")
-            Critter.setMood(-1)
 
         else :
             print("I'm " + self.name + " and I feel overjoyed now")
-            Critter.setMood(-1)
+        print('')
+        self.setMood(-1)
 
-    def feed(self) :
+    def feed(self, food) :
         print("Yummy!")
         print('')
-        Critter.setMood(2)
+        self.setMood(food.getLevel())
 
     def play(self) :
         print("Wheee!")
         print('')
-        Critter.setMood(2)
+        self.setMood(2)
 
-class Food() :
-    
+class Food :
+    def __init__(self, name, level) :
+        self.name = name
+        self.level = level
+
+    def getLevel(self) :
+        return self.level
+
+    def setCritterLevel(self, critter) :
+        critter.setMood(critter.getMood() + self.level)
+
+
+food1 = Food("feed", 1)
+food2 = Food("meat", 3)
+food3 = Food("vegetable", 2)
 
 input_name = input("What do you want to name your critter?: ")
 print('')
 
 crit = Critter(input_name)
-
 while True :
     print("\tCritter Caretaker")
     print('')
@@ -61,6 +70,16 @@ while True :
     elif choice == 1 :
         crit.talk()
     elif choice == 2 :
-        crit.feed()
+        print("\tChoose food for your critter")
+        print("\t0 - feed")
+        print("\t1 - meat")
+        print("\t2 - vegetable")
+        foodChoice = int(input("\tWhat kind of food would you feed your pet? : "))
+        if foodChoice == 0 :
+            crit.feed(food1)
+        elif foodChoice == 1 :
+            crit.feed(food2)
+        elif foodChoice == 2 :
+            crit.feed(food3)
     elif choice == 3 :
         crit.play()
